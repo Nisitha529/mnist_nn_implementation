@@ -1,0 +1,14 @@
+Time resolution is 1 ps
+Time	 x	 out
+0	 0	 x
+15000	 1	 x
+25000	 2	 x
+35000	 3	 x
+45000	 4	 x
+55000	 5	 x
+65000	 6	 x
+75000	 7	 x
+85000	 8	 x
+95000	 9	 x
+105000	 10	 x
+$finish called at time : 125 ns : File "/media/nisitha/My_Passport/MOODLE/Vivado_projects/cnn_character_recognition/custom_cnn_implementation/custom_nn_implementation/custom_nn_implementation/custom_nn_implementation.srcs/sim_1/new/tb_sig_rom.v" Line 33

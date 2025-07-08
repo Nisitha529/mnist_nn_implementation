@@ -1,0 +1,11 @@
+0.7
+2020.2
+Oct 13 2023
+20:21:30
+/media/nisitha/My_Passport/MOODLE/Vivado_projects/cnn_character_recognition/custom_cnn_implementation/custom_nn_implementation/custom_nn_implementation/custom_nn_implementation.sim/sim_1/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,,,,,,,
+/media/nisitha/My_Passport/MOODLE/Vivado_projects/cnn_character_recognition/custom_cnn_implementation/custom_nn_implementation/custom_nn_implementation/custom_nn_implementation.srcs/sim_1/new/tb_relu.v,1751801003,verilog,,,,tb_relu,,,,,,,,
+/media/nisitha/My_Passport/MOODLE/Vivado_projects/cnn_character_recognition/custom_cnn_implementation/custom_nn_implementation/custom_nn_implementation/custom_nn_implementation.srcs/sim_1/new/tb_sig_rom.v,1751803153,verilog,,,,tb_sig_rom,,,,,,,,
+/media/nisitha/My_Passport/MOODLE/Vivado_projects/cnn_character_recognition/custom_cnn_implementation/custom_nn_implementation/custom_nn_implementation/custom_nn_implementation.srcs/sim_1/new/tb_weight_memory.v,1751802983,verilog,,,,tb_weight_memory,,,,,,,,
+/media/nisitha/My_Passport/MOODLE/Vivado_projects/cnn_character_recognition/custom_cnn_implementation/custom_nn_implementation/custom_nn_implementation/custom_nn_implementation.srcs/sources_1/new/relu.v,1751800865,verilog,,/media/nisitha/My_Passport/MOODLE/Vivado_projects/cnn_character_recognition/custom_cnn_implementation/custom_nn_implementation/custom_nn_implementation/custom_nn_implementation.srcs/sim_1/new/tb_relu.v,,relu,,,,,,,,
+/media/nisitha/My_Passport/MOODLE/Vivado_projects/cnn_character_recognition/custom_cnn_implementation/custom_nn_implementation/custom_nn_implementation/custom_nn_implementation.srcs/sources_1/new/sig_rom.v,1751804196,verilog,,/media/nisitha/My_Passport/MOODLE/Vivado_projects/cnn_character_recognition/custom_cnn_implementation/custom_nn_implementation/custom_nn_implementation/custom_nn_implementation.srcs/sim_1/new/tb_sig_rom.v,,sig_rom,,,,,,,,
+/media/nisitha/My_Passport/MOODLE/Vivado_projects/cnn_character_recognition/custom_cnn_implementation/custom_nn_implementation/custom_nn_implementation/custom_nn_implementation.srcs/sources_1/new/weight_memory.v,1751802200,verilog,,/media/nisitha/My_Passport/MOODLE/Vivado_projects/cnn_character_recognition/custom_cnn_implementation/custom_nn_implementation/custom_nn_implementation/custom_nn_implementation.srcs/sim_1/new/tb_weight_memory.v,,weight_memory,,,,,,,,

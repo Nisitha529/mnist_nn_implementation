@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../custom_nn_implementation.srcs/sources_1/new/sig_rom.v" \
+"../../../../custom_nn_implementation.srcs/sim_1/new/tb_sig_rom.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
