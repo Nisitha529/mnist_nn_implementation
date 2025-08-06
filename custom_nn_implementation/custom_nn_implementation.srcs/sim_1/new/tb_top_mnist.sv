@@ -12,12 +12,15 @@ module tb_top_mnist();
   wire [31:0]             out;
   wire                    out_valid;
 
-  reg [DATAWIDTH-1:0] test_data [0:784];
-  reg [DATAWIDTH-1:0] expected;
+  reg [DATAWIDTH-1:0] test_data [0:784];  // 0-783: inputs, 784: expected
   string filename;
-  integer i, correct = 0, incorrect = 0;
+  integer i, correct = 0, total = 0;
 
-  top_mnist uut (
+  // Instantiate the top module
+  top_mnist #(
+    .DATAWIDTH(DATAWIDTH),
+    .WEIGHTINTWIDTH(4)  // Set to match the design
+  ) uut (
     .clk         (clk),
     .rst         (rst),
     .input_valid (input_valid),
@@ -26,17 +29,23 @@ module tb_top_mnist();
     .out_valid   (out_valid)
   );
 
+  // Clock generation
   initial clk = 0;
   always #5 clk = ~clk;
 
+  // Task to send a test sample
   task send_sample(input int index);
     begin
-      filename = $sformatf("test_data_%04d.txt", index);
+      // Format filename with index
+      filename = $sformatf("/media/nisitha/My_Passport/MOODLE/Vivado_projects/neuralNetwork-master/neuralNetwork-master/Tut-5/myProject1/myProject1.sim/sim_1/behav/xsim/test_data_%04d.txt", index);
+      
+      // Read test data
       $readmemb(filename, test_data);
-      expected = test_data[784];
+      
+      // Apply inputs
       @(posedge clk);
       input_valid = 1;
-      for (i = 0; i < 784; i++) begin
+      for (i = 0; i < 784; i = i + 1) begin
         input_val = test_data[i];
         @(posedge clk);
       end
@@ -44,31 +53,54 @@ module tb_top_mnist();
     end
   endtask
 
-  task wait_for_result();
-    begin
-      wait (out_valid);
-      @(posedge clk);
-    end
-  endtask
-
   initial begin
+    // Initialize
     clk = 0;
     rst = 1;
     input_valid = 0;
     input_val = 0;
-    repeat(10) @(posedge clk);
+    
+    // Reset
+    #100;
     rst = 0;
-
-    for (i = 0; i < MAX_TEST_SAMPLES; i++) begin
-      send_sample(i);
-      wait_for_result();
-      if (out == expected) correct++;
-      else incorrect++;
-      $display("Test %0d - Detected: %0d, Expected: %0d, Accuracy: %f%%", i, out, expected, correct * 100.0 / (i + 1));
+    #100;
+    
+    $display("Starting MNIST classification test...");
+    
+    // Process test samples
+    for (integer sample_idx = 0; sample_idx < MAX_TEST_SAMPLES; sample_idx = sample_idx + 1) begin
+      // Send sample
+      send_sample(sample_idx);
+      
+      // Wait for result
+      wait(out_valid);
+      @(posedge clk);
+      
+      // Verify result
+      total = total + 1;
+      if (out == test_data[784]) 
+        correct = correct + 1;
+      
+      // Display progress
+      $display("Test %0d - Detected: %0d, Expected: %0d, Accuracy: %0.2f%%", sample_idx, out, test_data[784], (correct * 100.0) / total);
     end
-
-    $display("Final Accuracy: %f%% (%0d/%0d)", correct * 100.0 / MAX_TEST_SAMPLES, correct, MAX_TEST_SAMPLES);
+    
+    // Final report
+    $display("\nTest completed. Final accuracy: %0.2f%% (%0d/%0d)", (correct * 100.0) / total, correct, total);
     $finish;
+  end
+
+  // Monitor results
+  always @(posedge clk) begin
+    if (out_valid) begin
+      $display("[%t] Output detected: %0d", $time, out);
+    end
+  end
+
+  // Waveform dumping
+  initial begin
+    $dumpfile("tb_top_mnist.vcd");
+    $dumpvars(0, tb_top_mnist);
   end
 
 endmodule

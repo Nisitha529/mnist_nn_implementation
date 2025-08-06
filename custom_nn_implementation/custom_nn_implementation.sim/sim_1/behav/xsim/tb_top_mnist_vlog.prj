@@ -1,0 +1,20 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../custom_nn_implementation.srcs/sources_1/new/layer_1.v" \
+"../../../../custom_nn_implementation.srcs/sources_1/new/layer_2.v" \
+"../../../../custom_nn_implementation.srcs/sources_1/new/layer_3.v" \
+"../../../../custom_nn_implementation.srcs/sources_1/new/layer_4.v" \
+"../../../../custom_nn_implementation.srcs/sources_1/new/maxfinder.v" \
+"../../../../custom_nn_implementation.srcs/sources_1/new/neuron_1.v" \
+"../../../../custom_nn_implementation.srcs/sources_1/new/relu.v" \
+"../../../../custom_nn_implementation.srcs/sources_1/new/top_mnist.v" \
+"../../../../custom_nn_implementation.srcs/sources_1/new/weight_memory.v" \
+
+sv xil_defaultlib  \
+"../../../../custom_nn_implementation.srcs/sim_1/new/tb_top_mnist.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

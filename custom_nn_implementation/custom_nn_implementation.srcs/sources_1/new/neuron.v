@@ -1,7 +1,6 @@
 `timescale 1ns / 1ps
-`include "include.v"
 
-module neuron #(
+module neuron_1 #(
   parameter NUM_INPUTS      = 784,
   parameter DATAWIDTH       = 16,
   parameter WEIGHTINTWIDTH  = 1,
@@ -16,7 +15,7 @@ module neuron #(
   output reg                 out_valid
 );
 
-  parameter ADDR_WIDTH = $clog2(NUM_INPUTS);
+  localparam ADDR_WIDTH = $clog2(NUM_INPUTS);
 
   reg  [ADDR_WIDTH:0]        input_index;
   reg  [DATAWIDTH-1:0]       input_reg;
@@ -48,15 +47,11 @@ module neuron #(
   end
 
   always @(posedge clk) begin
-    input_reg <= input_val;
-  end
-
-  always @(posedge clk) begin
     product <= $signed(input_reg) * $signed(weight);
   end
 
   always @(posedge clk) begin
-    if (rst || out_valid)
+    if (rst | out_valid)
       sum <= 0;
     else if ((input_index == NUM_INPUTS) && end_of_dot_d) begin
       if (!bias[2*DATAWIDTH-1] && !sum[2*DATAWIDTH-1] && biased_sum[2*DATAWIDTH-1])
@@ -76,6 +71,7 @@ module neuron #(
   end
 
   always @(posedge clk) begin
+    input_reg      <= input_val;
     input_valid_d1 <= input_valid;
     input_valid_d2 <= input_valid_d1;
     end_of_dot     <= (input_index == NUM_INPUTS);
@@ -88,7 +84,7 @@ module neuron #(
     .ADDRESSWIDTH  (ADDR_WIDTH),
     .DATAWIDTH     (DATAWIDTH),
     .WEIGHTFILE    (WEIGHTFILE)
-  ) wm (
+  ) weight_mem (
     .clk           (clk),
     .ren           (read_en),
     .radd          (input_index),
@@ -98,7 +94,7 @@ module neuron #(
   relu #(
     .DATAWIDTH      (DATAWIDTH),
     .WEIGHTINTWIDTH (WEIGHTINTWIDTH)
-  ) act (
+  ) relu_act (
     .clk            (clk),
     .x              (sum),
     .out            (out)

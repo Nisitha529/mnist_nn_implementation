@@ -1,14 +1,205 @@
 Time resolution is 1 ps
-Time	 x	 out
-0	 0	 x
-15000	 1	 x
-25000	 2	 x
-35000	 3	 x
-45000	 4	 x
-55000	 5	 x
-65000	 6	 x
-75000	 7	 x
-85000	 8	 x
-95000	 9	 x
-105000	 10	 x
-$finish called at time : 125 ns : File "/media/nisitha/My_Passport/MOODLE/Vivado_projects/cnn_character_recognition/custom_cnn_implementation/custom_nn_implementation/custom_nn_implementation/custom_nn_implementation.srcs/sim_1/new/tb_sig_rom.v" Line 33
+Starting MNIST classification test...
+Test 0 - Detected: 2, Expected: 7, Accuracy: 0.00%
+[             9115000] Output detected: 2
+Test 1 - Detected: 2, Expected: 2, Accuracy: 50.00%
+[            18035000] Output detected: 2
+Test 2 - Detected: 2, Expected: 1, Accuracy: 33.33%
+[            26955000] Output detected: 2
+Test 3 - Detected: 2, Expected: 0, Accuracy: 25.00%
+[            35875000] Output detected: 2
+Test 4 - Detected: 2, Expected: 4, Accuracy: 20.00%
+[            44795000] Output detected: 2
+Test 5 - Detected: 2, Expected: 1, Accuracy: 16.67%
+[            53715000] Output detected: 2
+Test 6 - Detected: 2, Expected: 4, Accuracy: 14.29%
+[            62635000] Output detected: 2
+Test 7 - Detected: 2, Expected: 9, Accuracy: 12.50%
+[            71555000] Output detected: 2
+Test 8 - Detected: 2, Expected: 5, Accuracy: 11.11%
+[            80475000] Output detected: 2
+Test 9 - Detected: 2, Expected: 9, Accuracy: 10.00%
+[            89395000] Output detected: 2
+Test 10 - Detected: 2, Expected: 0, Accuracy: 9.09%
+[            98315000] Output detected: 2
+Test 11 - Detected: 2, Expected: 6, Accuracy: 8.33%
+[           107235000] Output detected: 2
+Test 12 - Detected: 2, Expected: 9, Accuracy: 7.69%
+[           116155000] Output detected: 2
+Test 13 - Detected: 2, Expected: 0, Accuracy: 7.14%
+[           125075000] Output detected: 2
+Test 14 - Detected: 2, Expected: 1, Accuracy: 6.67%
+[           133995000] Output detected: 2
+Test 15 - Detected: 2, Expected: 5, Accuracy: 6.25%
+[           142915000] Output detected: 2
+Test 16 - Detected: 2, Expected: 9, Accuracy: 5.88%
+[           151835000] Output detected: 2
+Test 17 - Detected: 2, Expected: 7, Accuracy: 5.56%
+[           160755000] Output detected: 2
+Test 18 - Detected: 2, Expected: 3, Accuracy: 5.26%
+[           169675000] Output detected: 2
+Test 19 - Detected: 2, Expected: 4, Accuracy: 5.00%
+[           178595000] Output detected: 2
+Test 20 - Detected: 2, Expected: 9, Accuracy: 4.76%
+[           187515000] Output detected: 2
+Test 21 - Detected: 2, Expected: 6, Accuracy: 4.55%
+[           196435000] Output detected: 2
+Test 22 - Detected: 2, Expected: 6, Accuracy: 4.35%
+[           205355000] Output detected: 2
+Test 23 - Detected: 2, Expected: 5, Accuracy: 4.17%
+[           214275000] Output detected: 2
+Test 24 - Detected: 2, Expected: 4, Accuracy: 4.00%
+[           223195000] Output detected: 2
+Test 25 - Detected: 2, Expected: 0, Accuracy: 3.85%
+[           232115000] Output detected: 2
+Test 26 - Detected: 2, Expected: 7, Accuracy: 3.70%
+[           241035000] Output detected: 2
+Test 27 - Detected: 2, Expected: 4, Accuracy: 3.57%
+[           249955000] Output detected: 2
+Test 28 - Detected: 2, Expected: 0, Accuracy: 3.45%
+[           258875000] Output detected: 2
+Test 29 - Detected: 2, Expected: 1, Accuracy: 3.33%
+[           267795000] Output detected: 2
+Test 30 - Detected: 2, Expected: 3, Accuracy: 3.23%
+[           276715000] Output detected: 2
+Test 31 - Detected: 2, Expected: 1, Accuracy: 3.12%
+[           285635000] Output detected: 2
+Test 32 - Detected: 2, Expected: 3, Accuracy: 3.03%
+[           294555000] Output detected: 2
+Test 33 - Detected: 2, Expected: 4, Accuracy: 2.94%
+[           303475000] Output detected: 2
+Test 34 - Detected: 2, Expected: 7, Accuracy: 2.86%
+[           312395000] Output detected: 2
+Test 35 - Detected: 2, Expected: 2, Accuracy: 5.56%
+[           321315000] Output detected: 2
+Test 36 - Detected: 2, Expected: 7, Accuracy: 5.41%
+[           330235000] Output detected: 2
+Test 37 - Detected: 2, Expected: 1, Accuracy: 5.26%
+[           339155000] Output detected: 2
+Test 38 - Detected: 2, Expected: 2, Accuracy: 7.69%
+[           348075000] Output detected: 2
+Test 39 - Detected: 2, Expected: 1, Accuracy: 7.50%
+[           356995000] Output detected: 2
+Test 40 - Detected: 2, Expected: 1, Accuracy: 7.32%
+[           365915000] Output detected: 2
+Test 41 - Detected: 2, Expected: 7, Accuracy: 7.14%
+[           374835000] Output detected: 2
+Test 42 - Detected: 2, Expected: 4, Accuracy: 6.98%
+[           383755000] Output detected: 2
+Test 43 - Detected: 2, Expected: 2, Accuracy: 9.09%
+[           392675000] Output detected: 2
+Test 44 - Detected: 2, Expected: 3, Accuracy: 8.89%
+[           401595000] Output detected: 2
+Test 45 - Detected: 2, Expected: 5, Accuracy: 8.70%
+[           410515000] Output detected: 2
+Test 46 - Detected: 2, Expected: 1, Accuracy: 8.51%
+[           419435000] Output detected: 2
+Test 47 - Detected: 2, Expected: 2, Accuracy: 10.42%
+[           428355000] Output detected: 2
+Test 48 - Detected: 2, Expected: 4, Accuracy: 10.20%
+[           437275000] Output detected: 2
+Test 49 - Detected: 2, Expected: 4, Accuracy: 10.00%
+[           446195000] Output detected: 2
+Test 50 - Detected: 2, Expected: 6, Accuracy: 9.80%
+[           455115000] Output detected: 2
+Test 51 - Detected: 2, Expected: 3, Accuracy: 9.62%
+[           464035000] Output detected: 2
+Test 52 - Detected: 2, Expected: 5, Accuracy: 9.43%
+[           472955000] Output detected: 2
+Test 53 - Detected: 2, Expected: 5, Accuracy: 9.26%
+[           481875000] Output detected: 2
+Test 54 - Detected: 2, Expected: 6, Accuracy: 9.09%
+[           490795000] Output detected: 2
+Test 55 - Detected: 2, Expected: 0, Accuracy: 8.93%
+[           499715000] Output detected: 2
+Test 56 - Detected: 2, Expected: 4, Accuracy: 8.77%
+[           508635000] Output detected: 2
+Test 57 - Detected: 2, Expected: 1, Accuracy: 8.62%
+[           517555000] Output detected: 2
+Test 58 - Detected: 2, Expected: 9, Accuracy: 8.47%
+[           526475000] Output detected: 2
+Test 59 - Detected: 2, Expected: 5, Accuracy: 8.33%
+[           535395000] Output detected: 2
+Test 60 - Detected: 2, Expected: 7, Accuracy: 8.20%
+[           544315000] Output detected: 2
+Test 61 - Detected: 2, Expected: 8, Accuracy: 8.06%
+[           553235000] Output detected: 2
+Test 62 - Detected: 2, Expected: 9, Accuracy: 7.94%
+[           562155000] Output detected: 2
+Test 63 - Detected: 2, Expected: 3, Accuracy: 7.81%
+[           571075000] Output detected: 2
+Test 64 - Detected: 2, Expected: 7, Accuracy: 7.69%
+[           579995000] Output detected: 2
+Test 65 - Detected: 2, Expected: 4, Accuracy: 7.58%
+[           588915000] Output detected: 2
+Test 66 - Detected: 2, Expected: 6, Accuracy: 7.46%
+[           597835000] Output detected: 2
+Test 67 - Detected: 2, Expected: 4, Accuracy: 7.35%
+[           606755000] Output detected: 2
+Test 68 - Detected: 2, Expected: 3, Accuracy: 7.25%
+[           615675000] Output detected: 2
+Test 69 - Detected: 2, Expected: 0, Accuracy: 7.14%
+[           624595000] Output detected: 2
+Test 70 - Detected: 2, Expected: 7, Accuracy: 7.04%
+[           633515000] Output detected: 2
+Test 71 - Detected: 2, Expected: 0, Accuracy: 6.94%
+[           642435000] Output detected: 2
+Test 72 - Detected: 2, Expected: 2, Accuracy: 8.22%
+[           651355000] Output detected: 2
+Test 73 - Detected: 2, Expected: 9, Accuracy: 8.11%
+[           660275000] Output detected: 2
+Test 74 - Detected: 2, Expected: 1, Accuracy: 8.00%
+[           669195000] Output detected: 2
+Test 75 - Detected: 2, Expected: 7, Accuracy: 7.89%
+[           678115000] Output detected: 2
+Test 76 - Detected: 2, Expected: 3, Accuracy: 7.79%
+[           687035000] Output detected: 2
+Test 77 - Detected: 2, Expected: 2, Accuracy: 8.97%
+[           695955000] Output detected: 2
+Test 78 - Detected: 2, Expected: 9, Accuracy: 8.86%
+[           704875000] Output detected: 2
+Test 79 - Detected: 2, Expected: 7, Accuracy: 8.75%
+[           713795000] Output detected: 2
+Test 80 - Detected: 2, Expected: 7, Accuracy: 8.64%
+[           722715000] Output detected: 2
+Test 81 - Detected: 2, Expected: 6, Accuracy: 8.54%
+[           731635000] Output detected: 2
+Test 82 - Detected: 2, Expected: 2, Accuracy: 9.64%
+[           740555000] Output detected: 2
+Test 83 - Detected: 2, Expected: 7, Accuracy: 9.52%
+[           749475000] Output detected: 2
+Test 84 - Detected: 2, Expected: 8, Accuracy: 9.41%
+[           758395000] Output detected: 2
+Test 85 - Detected: 2, Expected: 4, Accuracy: 9.30%
+[           767315000] Output detected: 2
+Test 86 - Detected: 2, Expected: 7, Accuracy: 9.20%
+[           776235000] Output detected: 2
+Test 87 - Detected: 2, Expected: 3, Accuracy: 9.09%
+[           785155000] Output detected: 2
+Test 88 - Detected: 2, Expected: 6, Accuracy: 8.99%
+[           794075000] Output detected: 2
+Test 89 - Detected: 2, Expected: 1, Accuracy: 8.89%
+[           802995000] Output detected: 2
+Test 90 - Detected: 2, Expected: 3, Accuracy: 8.79%
+[           811915000] Output detected: 2
+Test 91 - Detected: 2, Expected: 6, Accuracy: 8.70%
+[           820835000] Output detected: 2
+Test 92 - Detected: 2, Expected: 9, Accuracy: 8.60%
+[           829755000] Output detected: 2
+Test 93 - Detected: 2, Expected: 3, Accuracy: 8.51%
+[           838675000] Output detected: 2
+Test 94 - Detected: 2, Expected: 1, Accuracy: 8.42%
+[           847595000] Output detected: 2
+Test 95 - Detected: 2, Expected: 4, Accuracy: 8.33%
+[           856515000] Output detected: 2
+Test 96 - Detected: 2, Expected: 1, Accuracy: 8.25%
+[           865435000] Output detected: 2
+Test 97 - Detected: 2, Expected: 7, Accuracy: 8.16%
+[           874355000] Output detected: 2
+Test 98 - Detected: 2, Expected: 6, Accuracy: 8.08%
+[           883275000] Output detected: 2
+Test 99 - Detected: 2, Expected: 9, Accuracy: 8.00%
+
+Test completed. Final accuracy: 8.00% (8/100)
+$finish called at time : 892195 ns : File "/media/nisitha/My_Passport/MOODLE/Vivado_projects/cnn_character_recognition/custom_cnn_implementation/custom_nn_implementation/custom_nn_implementation/custom_nn_implementation.srcs/sim_1/new/tb_top_mnist.sv" Line 90
+INFO: xsimkernel Simulation Memory Usage: 120376 KB (Peak: 164352 KB), Simulation CPU Usage: 37330 ms
