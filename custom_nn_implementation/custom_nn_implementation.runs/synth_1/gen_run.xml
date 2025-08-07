@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1754416096" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/top_mnist.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1754587647" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/top_mnist.dcp">
+  <File Type="VDS-TIMING-PB" Name="top_mnist_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="top_mnist_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="top_mnist.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="top_mnist_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="top_mnist_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="top_mnist_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="top_mnist.vds"/>
   <File Type="REPORTS-TCL" Name="top_mnist_reports.tcl"/>
   <File Type="PA-TCL" Name="top_mnist.tcl"/>
-  <File Type="RDS-DCP" Name="top_mnist.dcp"/>
-  <File Type="RDS-UTIL" Name="top_mnist_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="top_mnist_utilization_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/layer_1.v">
@@ -43,7 +46,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/neuron.v">
+    <File Path="$PSRCDIR/sources_1/new/neuron_1.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -71,8 +74,9 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/neuron_1.v">
+    <File Path="$PSRCDIR/sources_1/new/neuron.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -80,6 +84,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/sig_rom.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
