@@ -34,7 +34,6 @@ module neuron #(
     reg  [DATAWIDTH-1:0]   input_reg;  // input_reg
     reg                    muxvalid_d;
     reg                    muxvalid_f;
-    reg                    addr=0;
 	
     assign mux_valid  = input_valid_d2;
     assign combo_sum  = product + sum;
@@ -59,41 +58,54 @@ module neuron #(
     end
     
     
-    always @(posedge clk) begin
-    if(rst|out_valid)
-      sum                      <= 0;
-      else if((input_index == NUM_INPUTS) & muxvalid_f) begin
-        if(!bias[2*DATAWIDTH-1] &!sum[2*DATAWIDTH-1] & biased_sum[2*DATAWIDTH-1]) begin//If bias and sum are positive and after adding bias to sum, if sign bit becomes 1, saturate
-            sum[2*DATAWIDTH-1]   <= 1'b0;
-            sum[2*DATAWIDTH-2:0] <= {2*DATAWIDTH-1{1'b1}};
-        end else if(bias[2*DATAWIDTH-1] & sum[2*DATAWIDTH-1] &  !biased_sum[2*DATAWIDTH-1]) begin//If bias and sum are negative and after addition if sign bit is 0, saturate
-            sum[2*DATAWIDTH-1]   <= 1'b1;
-            sum[2*DATAWIDTH-2:0] <= {2*DATAWIDTH-1{1'b0}};
-        end else
-            sum <= biased_sum; 
-      end else if(mux_valid) begin
-        if(!product[2*DATAWIDTH-1] & !sum[2*DATAWIDTH-1] & combo_sum[2*DATAWIDTH-1]) begin
-            sum[2*DATAWIDTH-1]   <= 1'b0;
-            sum[2*DATAWIDTH-2:0] <= {2*DATAWIDTH-1{1'b1}};
-        end else if(product[2*DATAWIDTH-1] & sum[2*DATAWIDTH-1] & !combo_sum[2*DATAWIDTH-1]) begin
-            sum[2*DATAWIDTH-1]   <= 1'b1;
-            sum[2*DATAWIDTH-2:0] <= {2*DATAWIDTH-1{1'b0}};
-        end else
-            sum <= combo_sum; 
-      end
-    end
+//    always @(posedge clk) begin
+//    if(rst|out_valid)
+//      sum                      <= 0;
+//      else if((input_index == NUM_INPUTS) & muxvalid_f) begin
+//        if(!bias[2*DATAWIDTH-1] &!sum[2*DATAWIDTH-1] & biased_sum[2*DATAWIDTH-1]) begin//If bias and sum are positive and after adding bias to sum, if sign bit becomes 1, saturate
+//            sum[2*DATAWIDTH-1]   <= 1'b0;
+//            sum[2*DATAWIDTH-2:0] <= {2*DATAWIDTH-1{1'b1}};
+//        end else if(bias[2*DATAWIDTH-1] & sum[2*DATAWIDTH-1] &  !biased_sum[2*DATAWIDTH-1]) begin//If bias and sum are negative and after addition if sign bit is 0, saturate
+//            sum[2*DATAWIDTH-1]   <= 1'b1;
+//            sum[2*DATAWIDTH-2:0] <= {2*DATAWIDTH-1{1'b0}};
+//        end else
+//            sum <= biased_sum; 
+//      end else if(mux_valid) begin
+//        if(!product[2*DATAWIDTH-1] & !sum[2*DATAWIDTH-1] & combo_sum[2*DATAWIDTH-1]) begin
+//            sum[2*DATAWIDTH-1]   <= 1'b0;
+//            sum[2*DATAWIDTH-2:0] <= {2*DATAWIDTH-1{1'b1}};
+//        end else if(product[2*DATAWIDTH-1] & sum[2*DATAWIDTH-1] & !combo_sum[2*DATAWIDTH-1]) begin
+//            sum[2*DATAWIDTH-1]   <= 1'b1;
+//            sum[2*DATAWIDTH-2:0] <= {2*DATAWIDTH-1{1'b0}};
+//        end else
+//            sum <= combo_sum; 
+//      end
+//    end
 
-//  always @(posedge clk) begin
-//    if (rst | out_valid) begin
-//      sum <= 0;
-//    end
-//    else if ((input_index == NUM_INPUTS) && muxvalid_f) begin
-//      sum <= (biased_sum[2*DATAWIDTH] != biased_sum[2*DATAWIDTH-1]) ? {biased_sum[2*DATAWIDTH], {2*DATAWIDTH-1{biased_sum[2*DATAWIDTH-1]}}} : biased_sum;
-//    end
-//    else if (mux_valid) begin
-//      sum <= (combo_sum[2*DATAWIDTH] != combo_sum[2*DATAWIDTH-1]) ? {combo_sum[2*DATAWIDTH], {2*DATAWIDTH-1{combo_sum[2*DATAWIDTH-1]}}} : combo_sum;
-//    end
-//  end
+always @(posedge clk) begin
+  if (rst | out_valid) begin
+    sum <= 0;
+  end
+  else if ((input_index == NUM_INPUTS) && muxvalid_f) begin
+    // Saturate biased_sum if overflow occurs
+    if (!bias[2*DATAWIDTH-1] & !sum[2*DATAWIDTH-1] & biased_sum[2*DATAWIDTH-1])
+      sum <= {1'b0, {2*DATAWIDTH-1{1'b1}}};  // Max positive
+    else if (bias[2*DATAWIDTH-1] & sum[2*DATAWIDTH-1] & !biased_sum[2*DATAWIDTH-1])
+      sum <= {1'b1, {2*DATAWIDTH-1{1'b0}}};  // Max negative
+    else
+      sum <= biased_sum;
+  end
+  else if (mux_valid) begin
+    // Saturate combo_sum if overflow occurs
+    if (!product[2*DATAWIDTH-1] & !sum[2*DATAWIDTH-1] & combo_sum[2*DATAWIDTH-1])
+      sum <= {1'b0, {2*DATAWIDTH-1{1'b1}}};  // Max positive
+    else if (product[2*DATAWIDTH-1] & sum[2*DATAWIDTH-1] & !combo_sum[2*DATAWIDTH-1])
+      sum <= {1'b1, {2*DATAWIDTH-1{1'b0}}};  // Max negative
+    else
+      sum <= combo_sum;
+  end
+end
+
     
     always @(posedge clk) begin
       input_reg      <= input_val;
