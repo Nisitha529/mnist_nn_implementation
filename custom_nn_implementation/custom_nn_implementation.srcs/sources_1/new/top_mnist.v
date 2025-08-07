@@ -206,7 +206,7 @@ module top_mnist #(
 //        IDLE: begin
 //          count_4   <= 0;
 //          valid_4   <= 0;
-//          if (o4_valid[0]) begin
+//          if (&o4_valid[0]) begin
 //            hold_4  <= x4_out;
 //            state_4 <= SEND;
 //          end

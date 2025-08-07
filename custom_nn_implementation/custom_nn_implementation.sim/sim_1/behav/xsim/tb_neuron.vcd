@@ -1,5 +1,5 @@
 $date
-   Tue Aug  5 23:23:40 2025
+   Wed Aug  6 16:55:39 2025
 $end
 
 $version
@@ -30,8 +30,8 @@ $var reg 1 - out_valid $end
 $var wire 1 . read_en $end
 $var wire 16 / weight [15:0] $end
 $var wire 1 0 mux_valid $end
-$var wire 33 1 combo_sum [32:0] $end
-$var wire 33 2 biased_sum [32:0] $end
+$var wire 32 1 combo_sum [31:0] $end
+$var wire 32 2 biased_sum [31:0] $end
 $var reg 3 3 input_index [2:0] $end
 $var reg 32 4 product [31:0] $end
 $var reg 32 5 sum [31:0] $end
