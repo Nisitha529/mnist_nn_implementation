@@ -21,11 +21,11 @@ module neuron #(
     wire                   read_en;      
     wire [DATAWIDTH-1:0]   weight;       
     wire                   mux_valid;
-    wire [2*DATAWIDTH:0]   combo_sum;    
-    wire [2*DATAWIDTH:0]   biased_sum;   
+    (* use_dsp48 = "no" *) wire [2*DATAWIDTH:0]   combo_sum;    
+    (* use_dsp48 = "no" *) wire [2*DATAWIDTH:0]   biased_sum;   
     
     reg  [ADDR_WIDTH:0]    input_index;  
-    (* use_dsp48 = "yes" *)reg  [2*DATAWIDTH-1:0] product;     
+    reg  [2*DATAWIDTH-1:0] product;     
     reg  [2*DATAWIDTH-1:0] sum;
     reg  [2*DATAWIDTH-1:0] bias;
     reg                    input_valid_d1;       

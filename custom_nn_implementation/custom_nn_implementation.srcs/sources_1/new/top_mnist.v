@@ -30,7 +30,7 @@ module top_mnist #(
     .NUM_INPUTS     (L1_NUM_INPUTS),
     .DATAWIDTH      (DATAWIDTH),
     .WEIGHTINTWIDTH (WEIGHTINTWIDTH)
-  ) l1 (
+  ) layer_01 (
     .clk            (clk),
     .rst            (rst),
     .input_valid    (input_valid),
@@ -82,7 +82,7 @@ module top_mnist #(
     .NUM_INPUTS     (L2_NUM_INPUTS),
     .DATAWIDTH      (DATAWIDTH),
     .WEIGHTINTWIDTH (WEIGHTINTWIDTH)
-  ) l2 (
+  ) layer_2_01 (
     .clk            (clk),
     .rst            (rst),
     .input_valid    (valid_1),
@@ -133,7 +133,7 @@ module top_mnist #(
     .NUM_INPUTS     (L3_NUM_INPUTS),
     .DATAWIDTH      (DATAWIDTH),
     .WEIGHTINTWIDTH (WEIGHTINTWIDTH)
-  ) l3 (
+  ) layer_3_01 (
     .clk            (clk),
     .rst            (rst),
     .input_valid    (valid_2),
@@ -184,7 +184,7 @@ module top_mnist #(
     .NUM_INPUTS     (L4_NUM_INPUTS),
     .DATAWIDTH      (DATAWIDTH),
     .WEIGHTINTWIDTH (WEIGHTINTWIDTH)
-  ) l4 (
+  ) layer_4_01 (
     .clk            (clk),
     .rst            (rst),
     .input_valid    (valid_3),
@@ -230,7 +230,7 @@ module top_mnist #(
   maxfinder #(
     .NUM_INPUT      (L4_NUM_NEURONS),
     .INPUT_WIDTH    (DATAWIDTH)
-  ) mf (
+  ) maxfinder_01 (
     .i_clk          (clk),
     .i_data         (x4_out),
     .i_valid        (o4_valid),
