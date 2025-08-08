@@ -1,0 +1,4 @@
+Running: xsim.dir/top_zynet_behav/xsimk -simmode gui -wdb top_zynet_behav.wdb -simrunnum 0 -socket 49023
+Design successfully loaded
+Design Loading Memory Usage: 25148 KB (Peak: 25156 KB)
+Design Loading CPU Usage: 110 ms

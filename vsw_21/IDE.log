@@ -1,0 +1,14 @@
+08:56:38 INFO  : Launching XSCT server: xsct -n  -interactive /media/nisitha/My_Passport/MOODLE/Vivado_projects/cnn_character_recognition/custom_cnn_implementation/custom_nn_implementation/vsw_21/temp_xsdb_launch_script.tcl
+08:56:38 INFO  : Registering command handlers for Vitis TCF services
+08:56:39 INFO  : Platform repository initialization has completed.
+08:56:49 INFO  : XSCT server has started successfully.
+08:56:53 INFO  : Successfully done setting XSCT server connection channel  
+08:56:53 INFO  : plnx-install-location is set to ''
+08:56:53 INFO  : Successfully done query RDI_DATADIR 
+08:56:53 INFO  : Successfully done setting workspace for the tool. 
+08:58:14 INFO  : Result from executing command 'getProjects': plt_mnist
+08:58:14 INFO  : Result from executing command 'getPlatforms': 
+08:59:15 INFO  : Result from executing command 'getProjects': plt_mnist
+08:59:15 INFO  : Result from executing command 'getPlatforms': plt_mnist|/media/nisitha/My_Passport/MOODLE/Vivado_projects/cnn_character_recognition/custom_cnn_implementation/custom_nn_implementation/vsw_21/plt_mnist/export/plt_mnist/plt_mnist.xpfm
+09:02:53 INFO  : Checking for BSP changes to sync application flags for project 'app_mnist'...
+09:07:47 INFO  : Checking for BSP changes to sync application flags for project 'app_mnist'...

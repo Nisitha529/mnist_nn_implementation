@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Fri Aug  8 03:12:17 2025
+# Process ID: 289090
+# Current directory: /media/nisitha/My_Passport/MOODLE/Vivado_projects/cnn_character_recognition/custom_cnn_implementation/custom_nn_implementation/custom_nn_implementation/custom_nn_implementation.runs/bd_mnist_processing_system7_0_0_synth_1
+# Command line: vivado -log bd_mnist_processing_system7_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_mnist_processing_system7_0_0.tcl
+# Log file: /media/nisitha/My_Passport/MOODLE/Vivado_projects/cnn_character_recognition/custom_cnn_implementation/custom_nn_implementation/custom_nn_implementation/custom_nn_implementation.runs/bd_mnist_processing_system7_0_0_synth_1/bd_mnist_processing_system7_0_0.vds
+# Journal file: /media/nisitha/My_Passport/MOODLE/Vivado_projects/cnn_character_recognition/custom_cnn_implementation/custom_nn_implementation/custom_nn_implementation/custom_nn_implementation.runs/bd_mnist_processing_system7_0_0_synth_1/vivado.jou
+# Running On: nisitha-laptop, OS: Linux, CPU Frequency: 1126.647 MHz, CPU Physical cores: 4, Host memory: 16471 MB
+#-----------------------------------------------------------
+source bd_mnist_processing_system7_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1348.551 ; gain = 0.023 ; free physical = 190 ; free virtual = 2550
+Command: synth_design -top bd_mnist_processing_system7_0_0 -part xc7z010clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 289457

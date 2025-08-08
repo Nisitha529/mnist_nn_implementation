@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1754591137" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/top_mnist.dcp">
-  <File Type="VDS-TIMING-PB" Name="top_mnist_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="top_mnist_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="top_mnist.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="top_mnist_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="top_mnist_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="top_mnist_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="top_mnist.vds"/>
-  <File Type="REPORTS-TCL" Name="top_mnist_reports.tcl"/>
-  <File Type="PA-TCL" Name="top_mnist.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1754604203" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/top_mnist.dcp">
+  <File Type="VDS-TIMING-PB" Name="bd_mnist_wrapper_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="bd_mnist_wrapper_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="bd_mnist_wrapper.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="bd_mnist_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="bd_mnist_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="bd_mnist_wrapper_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="bd_mnist_wrapper.vds"/>
+  <File Type="REPORTS-TCL" Name="bd_mnist_wrapper_reports.tcl"/>
+  <File Type="PA-TCL" Name="bd_mnist_wrapper.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/axi_lite_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/layer_1.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -74,6 +81,20 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/bd/bd_mnist/bd_mnist.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/bd_mnist/hdl/bd_mnist_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/neuron.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -104,8 +125,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="top_mnist"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="bd_mnist_wrapper"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -134,4 +154,13 @@
       <Option Id="MoreOptsStr"><![CDATA[-max_dsp 80]]></Option>
     </Step>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="bd_mnist_auto_pc_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="bd_mnist_auto_pc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="bd_mnist_auto_us_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="bd_mnist_axi_dma_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="bd_mnist_xbar_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="bd_mnist_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="bd_mnist_top_mnist_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="bd_mnist_rst_ps7_0_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="bd_mnist_xbar_0"/>
 </GenRun>

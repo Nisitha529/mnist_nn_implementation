@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Fri Aug  8 07:21:30 2025
+# Process ID: 308526
+# Current directory: /media/nisitha/My_Passport/MOODLE/Vivado_projects/cnn_character_recognition/custom_cnn_implementation/custom_nn_implementation/custom_nn_implementation/custom_nn_implementation.runs/impl_1
+# Command line: vivado -log bd_mnist_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source bd_mnist_wrapper.tcl -notrace
+# Log file: /media/nisitha/My_Passport/MOODLE/Vivado_projects/cnn_character_recognition/custom_cnn_implementation/custom_nn_implementation/custom_nn_implementation/custom_nn_implementation.runs/impl_1/bd_mnist_wrapper.vdi
+# Journal file: /media/nisitha/My_Passport/MOODLE/Vivado_projects/cnn_character_recognition/custom_cnn_implementation/custom_nn_implementation/custom_nn_implementation/custom_nn_implementation.runs/impl_1/vivado.jou
+# Running On: nisitha-laptop, OS: Linux, CPU Frequency: 3599.766 MHz, CPU Physical cores: 4, Host memory: 16471 MB
+#-----------------------------------------------------------
+source bd_mnist_wrapper.tcl -notrace

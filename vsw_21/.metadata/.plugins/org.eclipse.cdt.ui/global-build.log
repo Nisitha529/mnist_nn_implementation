@@ -1,0 +1,31 @@
+Nothing to build in platform 'plt_mnist'
+
+09:07:47 **** Incremental Build of configuration Debug for project app_mnist ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+ 
+make --no-print-directory main-build
+Building file: ../src/nnTest.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/nnTest.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/media/nisitha/My_Passport/MOODLE/Vivado_projects/cnn_character_recognition/custom_cnn_implementation/custom_nn_implementation/vsw_21/plt_mnist/export/plt_mnist/sw/plt_mnist/standalone_domain/bspinclude/include -MMD -MP -MF"src/nnTest.d" -MT"src/nnTest.o" -o "src/nnTest.o" "../src/nnTest.c"
+Finished building: ../src/nnTest.c
+ 
+Building target: app_mnist.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L/media/nisitha/My_Passport/MOODLE/Vivado_projects/cnn_character_recognition/custom_cnn_implementation/custom_nn_implementation/vsw_21/plt_mnist/export/plt_mnist/sw/plt_mnist/standalone_domain/bsplib/lib -o "app_mnist.elf" ./src/nnTest.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: app_mnist.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size app_mnist.elf  |tee "app_mnist.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37804	   3816	  24536	  66156	  1026c	app_mnist.elf
+Finished building: app_mnist.elf.size
+ 
+09:07:50 **** Incremental Build of configuration Debug for project app_mnist_system ****
+make all 
+Generating bif file for the system project
+Executing command '::scw::generate_bif -xpfm /media/nisitha/My_Passport/MOODLE/Vivado_projects/cnn_character_recognition/custom_cnn_implementation/custom_nn_implementation/vsw_21/plt_mnist/export/plt_mnist/plt_mnist.xpfm -domains standalone_domain -bifpath /media/nisitha/My_Passport/MOODLE/Vivado_projects/cnn_character_recognition/custom_cnn_implementation/custom_nn_implementation/vsw_21/app_mnist_system/Debug/system.bif' on XSCT
+sdcard_gen --xpfm /media/nisitha/My_Passport/MOODLE/Vivado_projects/cnn_character_recognition/custom_cnn_implementation/custom_nn_implementation/vsw_21/plt_mnist/export/plt_mnist/plt_mnist.xpfm --sys_config plt_mnist --bif /media/nisitha/My_Passport/MOODLE/Vivado_projects/cnn_character_recognition/custom_cnn_implementation/custom_nn_implementation/vsw_21/app_mnist_system/Debug/system.bif --bitstream /media/nisitha/My_Passport/MOODLE/Vivado_projects/cnn_character_recognition/custom_cnn_implementation/custom_nn_implementation/vsw_21/app_mnist/_ide/bitstream/bd_mnist_wrapper.bit --elf /media/nisitha/My_Passport/MOODLE/Vivado_projects/cnn_character_recognition/custom_cnn_implementation/custom_nn_implementation/vsw_21/app_mnist/Debug/app_mnist.elf,ps7_cortexa9_0
+creating BOOT.BIN using /media/nisitha/My_Passport/MOODLE/Vivado_projects/cnn_character_recognition/custom_cnn_implementation/custom_nn_implementation/vsw_21/app_mnist/_ide/bitstream/bd_mnist_wrapper.bit
+Running /tools/Xilinx/Vitis/2021.2/bin/bootgen  -image /media/nisitha/My_Passport/MOODLE/Vivado_projects/cnn_character_recognition/custom_cnn_implementation/custom_nn_implementation/vsw_21/app_mnist_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
