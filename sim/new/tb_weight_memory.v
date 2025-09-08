@@ -2,10 +2,10 @@
 
 module tb_weight_memory;
 
-  localparam NUMWEIGHT     = 4;
+  localparam NUMWEIGHT     = 10;
   localparam ADDRESSWIDTH  = $clog2(NUMWEIGHT);
   localparam DATAWIDTH     = 16;
-  localparam WEIGHTFILE    = "w_4_9.mif";
+  localparam WEIGHTFILE    = "/media/nisitha/My_Passport/MOODLE/Vivado_projects/neuralNetwork-master/neuralNetwork-master/Tut-5/myProject1/myProject1.sim/sim_1/behav/xsim/w_4_9.mif";
 
   reg                        clk;
   reg                        ren;

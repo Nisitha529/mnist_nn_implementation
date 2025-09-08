@@ -14,7 +14,7 @@ module weight_memory #(
   output reg [DATAWIDTH-1:0]    wout
 );
 
-  reg [DATAWIDTH-1:0] mem [0:NUMWEIGHT-1];
+  reg [DATAWIDTH-1:0] mem [NUMWEIGHT-1 : 0];
 
   initial begin
     $readmemb(WEIGHTFILE, mem);

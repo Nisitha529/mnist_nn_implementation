@@ -18,7 +18,7 @@ module layer_1 #(
     .DATAWIDTH       (DATAWIDTH),
     .WEIGHTINTWIDTH  (WEIGHTINTWIDTH),
     .BIAS            (16'b1111011101100101),
-    .WEIGHTFILE      ("w_1_0.mif")
+    .WEIGHTFILE      ("/media/nisitha/My_Passport/MOODLE/Vivado_projects/neuralNetwork-master/neuralNetwork-master/Tut-5/myProject1/myProject1.sim/sim_1/behav/xsim/w_1_0.mif")
   ) n_0 (
     .clk             (clk),
     .rst             (rst),
@@ -33,7 +33,7 @@ module layer_1 #(
     .DATAWIDTH       (DATAWIDTH),
     .WEIGHTINTWIDTH  (WEIGHTINTWIDTH),
     .BIAS            (16'b0000010000001011),
-    .WEIGHTFILE      ("w_1_1.mif")
+    .WEIGHTFILE      ("/media/nisitha/My_Passport/MOODLE/Vivado_projects/neuralNetwork-master/neuralNetwork-master/Tut-5/myProject1/myProject1.sim/sim_1/behav/xsim/w_1_1.mif")
   ) n_1 (
     .clk             (clk),
     .rst             (rst),
@@ -48,7 +48,7 @@ module layer_1 #(
     .DATAWIDTH       (DATAWIDTH),
     .WEIGHTINTWIDTH  (WEIGHTINTWIDTH),
     .BIAS            (16'b0000000101111000),
-    .WEIGHTFILE      ("w_1_2.mif")
+    .WEIGHTFILE      ("/media/nisitha/My_Passport/MOODLE/Vivado_projects/neuralNetwork-master/neuralNetwork-master/Tut-5/myProject1/myProject1.sim/sim_1/behav/xsim/w_1_2.mif")
   ) n_2 (
     .clk             (clk),
     .rst             (rst),
@@ -63,7 +63,7 @@ module layer_1 #(
     .DATAWIDTH       (DATAWIDTH),
     .WEIGHTINTWIDTH  (WEIGHTINTWIDTH),
     .BIAS            (16'b0000000001100101),
-    .WEIGHTFILE      ("w_1_3.mif")
+    .WEIGHTFILE      ("/media/nisitha/My_Passport/MOODLE/Vivado_projects/neuralNetwork-master/neuralNetwork-master/Tut-5/myProject1/myProject1.sim/sim_1/behav/xsim/w_1_3.mif")
   ) n_3 (
     .clk             (clk),
     .rst             (rst),
@@ -78,7 +78,7 @@ module layer_1 #(
     .DATAWIDTH       (DATAWIDTH),
     .WEIGHTINTWIDTH  (WEIGHTINTWIDTH),
     .BIAS            (16'b1111000001111010),
-    .WEIGHTFILE      ("w_1_4.mif")
+    .WEIGHTFILE      ("/media/nisitha/My_Passport/MOODLE/Vivado_projects/neuralNetwork-master/neuralNetwork-master/Tut-5/myProject1/myProject1.sim/sim_1/behav/xsim/w_1_4.mif")
   ) n_4 (
     .clk             (clk),
     .rst             (rst),
@@ -93,7 +93,7 @@ module layer_1 #(
     .DATAWIDTH       (DATAWIDTH),
     .WEIGHTINTWIDTH  (WEIGHTINTWIDTH),
     .BIAS            (16'b1111110001110101),
-    .WEIGHTFILE      ("w_1_5.mif")
+    .WEIGHTFILE      ("/media/nisitha/My_Passport/MOODLE/Vivado_projects/neuralNetwork-master/neuralNetwork-master/Tut-5/myProject1/myProject1.sim/sim_1/behav/xsim/w_1_5.mif")
   ) n_5 (
     .clk             (clk),
     .rst             (rst),
@@ -108,7 +108,7 @@ module layer_1 #(
     .DATAWIDTH       (DATAWIDTH),
     .WEIGHTINTWIDTH  (WEIGHTINTWIDTH),
     .BIAS            (16'b1111110100111101),
-    .WEIGHTFILE      ("w_1_6.mif")
+    .WEIGHTFILE      ("/media/nisitha/My_Passport/MOODLE/Vivado_projects/neuralNetwork-master/neuralNetwork-master/Tut-5/myProject1/myProject1.sim/sim_1/behav/xsim/w_1_6.mif")
   ) n_6 (
     .clk             (clk),
     .rst             (rst),
@@ -123,7 +123,7 @@ module layer_1 #(
     .DATAWIDTH       (DATAWIDTH),
     .WEIGHTINTWIDTH  (WEIGHTINTWIDTH),
     .BIAS            (16'b0000010010001011),
-    .WEIGHTFILE      ("w_1_7.mif")
+    .WEIGHTFILE      ("/media/nisitha/My_Passport/MOODLE/Vivado_projects/neuralNetwork-master/neuralNetwork-master/Tut-5/myProject1/myProject1.sim/sim_1/behav/xsim/w_1_7.mif")
   ) n_7 (
     .clk             (clk),
     .rst             (rst),
@@ -138,7 +138,7 @@ module layer_1 #(
     .DATAWIDTH       (DATAWIDTH),
     .WEIGHTINTWIDTH  (WEIGHTINTWIDTH),
     .BIAS            (16'b0000001011000100),
-    .WEIGHTFILE      ("w_1_8.mif")
+    .WEIGHTFILE      ("/media/nisitha/My_Passport/MOODLE/Vivado_projects/neuralNetwork-master/neuralNetwork-master/Tut-5/myProject1/myProject1.sim/sim_1/behav/xsim/w_1_8.mif")
   ) n_8 (
     .clk             (clk),
     .rst             (rst),
@@ -153,7 +153,7 @@ module layer_1 #(
     .DATAWIDTH       (DATAWIDTH),
     .WEIGHTINTWIDTH  (WEIGHTINTWIDTH),
     .BIAS            (16'b1111110110100100),
-    .WEIGHTFILE      ("w_1_9.mif")
+    .WEIGHTFILE      ("/media/nisitha/My_Passport/MOODLE/Vivado_projects/neuralNetwork-master/neuralNetwork-master/Tut-5/myProject1/myProject1.sim/sim_1/behav/xsim/w_1_9.mif")
   ) n_9 (
     .clk             (clk),
     .rst             (rst),
@@ -168,7 +168,7 @@ module layer_1 #(
     .DATAWIDTH       (DATAWIDTH),
     .WEIGHTINTWIDTH  (WEIGHTINTWIDTH),
     .BIAS            (16'b1111011001000101),
-    .WEIGHTFILE      ("w_1_10.mif")
+    .WEIGHTFILE      ("/media/nisitha/My_Passport/MOODLE/Vivado_projects/neuralNetwork-master/neuralNetwork-master/Tut-5/myProject1/myProject1.sim/sim_1/behav/xsim/w_1_10.mif")
   ) n_10 (
     .clk             (clk),
     .rst             (rst),
@@ -183,7 +183,7 @@ module layer_1 #(
     .DATAWIDTH       (DATAWIDTH),
     .WEIGHTINTWIDTH  (WEIGHTINTWIDTH),
     .BIAS            (16'b0000000000010111),
-    .WEIGHTFILE      ("w_1_11.mif")
+    .WEIGHTFILE      ("/media/nisitha/My_Passport/MOODLE/Vivado_projects/neuralNetwork-master/neuralNetwork-master/Tut-5/myProject1/myProject1.sim/sim_1/behav/xsim/w_1_11.mif")
   ) n_11 (
     .clk             (clk),
     .rst             (rst),
@@ -198,7 +198,7 @@ module layer_1 #(
     .DATAWIDTH       (DATAWIDTH),
     .WEIGHTINTWIDTH  (WEIGHTINTWIDTH),
     .BIAS            (16'b0000100010011001),
-    .WEIGHTFILE      ("w_1_12.mif")
+    .WEIGHTFILE      ("/media/nisitha/My_Passport/MOODLE/Vivado_projects/neuralNetwork-master/neuralNetwork-master/Tut-5/myProject1/myProject1.sim/sim_1/behav/xsim/w_1_12.mif")
   ) n_12 (
     .clk             (clk),
     .rst             (rst),
@@ -213,7 +213,7 @@ module layer_1 #(
     .DATAWIDTH       (DATAWIDTH),
     .WEIGHTINTWIDTH  (WEIGHTINTWIDTH),
     .BIAS            (16'b1111100100111011),
-    .WEIGHTFILE      ("w_1_13.mif")
+    .WEIGHTFILE      ("/media/nisitha/My_Passport/MOODLE/Vivado_projects/neuralNetwork-master/neuralNetwork-master/Tut-5/myProject1/myProject1.sim/sim_1/behav/xsim/w_1_13.mif")
   ) n_13 (
     .clk             (clk),
     .rst             (rst),
@@ -228,7 +228,7 @@ module layer_1 #(
     .DATAWIDTH       (DATAWIDTH),
     .WEIGHTINTWIDTH  (WEIGHTINTWIDTH),
     .BIAS            (16'b0000010010101010),
-    .WEIGHTFILE      ("w_1_14.mif")
+    .WEIGHTFILE      ("/media/nisitha/My_Passport/MOODLE/Vivado_projects/neuralNetwork-master/neuralNetwork-master/Tut-5/myProject1/myProject1.sim/sim_1/behav/xsim/w_1_14.mif")
   ) n_14 (
     .clk             (clk),
     .rst             (rst),
@@ -243,7 +243,7 @@ module layer_1 #(
     .DATAWIDTH       (DATAWIDTH),
     .WEIGHTINTWIDTH  (WEIGHTINTWIDTH),
     .BIAS            (16'b0000101010011011),
-    .WEIGHTFILE      ("w_1_15.mif")
+    .WEIGHTFILE      ("/media/nisitha/My_Passport/MOODLE/Vivado_projects/neuralNetwork-master/neuralNetwork-master/Tut-5/myProject1/myProject1.sim/sim_1/behav/xsim/w_1_15.mif")
   ) n_15 (
     .clk             (clk),
     .rst             (rst),
@@ -258,7 +258,7 @@ module layer_1 #(
     .DATAWIDTH       (DATAWIDTH),
     .WEIGHTINTWIDTH  (WEIGHTINTWIDTH),
     .BIAS            (16'b0000001000011010),
-    .WEIGHTFILE      ("w_1_16.mif")
+    .WEIGHTFILE      ("/media/nisitha/My_Passport/MOODLE/Vivado_projects/neuralNetwork-master/neuralNetwork-master/Tut-5/myProject1/myProject1.sim/sim_1/behav/xsim/w_1_16.mif")
   ) n_16 (
     .clk             (clk),
     .rst             (rst),
@@ -273,7 +273,7 @@ module layer_1 #(
     .DATAWIDTH       (DATAWIDTH),
     .WEIGHTINTWIDTH  (WEIGHTINTWIDTH),
     .BIAS            (16'b0000001000010101),
-    .WEIGHTFILE      ("w_1_17.mif")
+    .WEIGHTFILE      ("/media/nisitha/My_Passport/MOODLE/Vivado_projects/neuralNetwork-master/neuralNetwork-master/Tut-5/myProject1/myProject1.sim/sim_1/behav/xsim/w_1_17.mif")
   ) n_17 (
     .clk             (clk),
     .rst             (rst),
@@ -288,7 +288,7 @@ module layer_1 #(
     .DATAWIDTH       (DATAWIDTH),
     .WEIGHTINTWIDTH  (WEIGHTINTWIDTH),
     .BIAS            (16'b0000000001110110),
-    .WEIGHTFILE      ("w_1_18.mif")
+    .WEIGHTFILE      ("/media/nisitha/My_Passport/MOODLE/Vivado_projects/neuralNetwork-master/neuralNetwork-master/Tut-5/myProject1/myProject1.sim/sim_1/behav/xsim/w_1_18.mif")
   ) n_18 (
     .clk             (clk),
     .rst             (rst),
@@ -303,7 +303,7 @@ module layer_1 #(
     .DATAWIDTH       (DATAWIDTH),
     .WEIGHTINTWIDTH  (WEIGHTINTWIDTH),
     .BIAS            (16'b0000001010110110),
-    .WEIGHTFILE      ("w_1_19.mif")
+    .WEIGHTFILE      ("/media/nisitha/My_Passport/MOODLE/Vivado_projects/neuralNetwork-master/neuralNetwork-master/Tut-5/myProject1/myProject1.sim/sim_1/behav/xsim/w_1_19.mif")
   ) n_19 (
     .clk             (clk),
     .rst             (rst),
@@ -318,7 +318,7 @@ module layer_1 #(
     .DATAWIDTH       (DATAWIDTH),
     .WEIGHTINTWIDTH  (WEIGHTINTWIDTH),
     .BIAS            (16'b0000001011000000),
-    .WEIGHTFILE      ("w_1_20.mif")
+    .WEIGHTFILE      ("/media/nisitha/My_Passport/MOODLE/Vivado_projects/neuralNetwork-master/neuralNetwork-master/Tut-5/myProject1/myProject1.sim/sim_1/behav/xsim/w_1_20.mif")
   ) n_20 (
     .clk             (clk),
     .rst             (rst),
@@ -333,7 +333,7 @@ module layer_1 #(
     .DATAWIDTH       (DATAWIDTH),
     .WEIGHTINTWIDTH  (WEIGHTINTWIDTH),
     .BIAS            (16'b0000000100111001),
-    .WEIGHTFILE      ("w_1_21.mif")
+    .WEIGHTFILE      ("/media/nisitha/My_Passport/MOODLE/Vivado_projects/neuralNetwork-master/neuralNetwork-master/Tut-5/myProject1/myProject1.sim/sim_1/behav/xsim/w_1_21.mif")
   ) n_21 (
     .clk             (clk),
     .rst             (rst),
@@ -348,7 +348,7 @@ module layer_1 #(
     .DATAWIDTH       (DATAWIDTH),
     .WEIGHTINTWIDTH  (WEIGHTINTWIDTH),
     .BIAS            (16'b1111100111010000),
-    .WEIGHTFILE      ("w_1_22.mif")
+    .WEIGHTFILE      ("/media/nisitha/My_Passport/MOODLE/Vivado_projects/neuralNetwork-master/neuralNetwork-master/Tut-5/myProject1/myProject1.sim/sim_1/behav/xsim/w_1_22.mif")
   ) n_22 (
     .clk             (clk),
     .rst             (rst),
@@ -363,7 +363,7 @@ module layer_1 #(
     .DATAWIDTH       (DATAWIDTH),
     .WEIGHTINTWIDTH  (WEIGHTINTWIDTH),
     .BIAS            (16'b0000001000100011),
-    .WEIGHTFILE      ("w_1_23.mif")
+    .WEIGHTFILE      ("/media/nisitha/My_Passport/MOODLE/Vivado_projects/neuralNetwork-master/neuralNetwork-master/Tut-5/myProject1/myProject1.sim/sim_1/behav/xsim/w_1_23.mif")
   ) n_23 (
     .clk             (clk),
     .rst             (rst),
@@ -378,7 +378,7 @@ module layer_1 #(
     .DATAWIDTH       (DATAWIDTH),
     .WEIGHTINTWIDTH  (WEIGHTINTWIDTH),
     .BIAS            (16'b1111110001010010),
-    .WEIGHTFILE      ("w_1_24.mif")
+    .WEIGHTFILE      ("/media/nisitha/My_Passport/MOODLE/Vivado_projects/neuralNetwork-master/neuralNetwork-master/Tut-5/myProject1/myProject1.sim/sim_1/behav/xsim/w_1_24.mif")
   ) n_24 (
     .clk             (clk),
     .rst             (rst),
@@ -393,7 +393,7 @@ module layer_1 #(
     .DATAWIDTH       (DATAWIDTH),
     .WEIGHTINTWIDTH  (WEIGHTINTWIDTH),
     .BIAS            (16'b1111111100100100),
-    .WEIGHTFILE      ("w_1_25.mif")
+    .WEIGHTFILE      ("/media/nisitha/My_Passport/MOODLE/Vivado_projects/neuralNetwork-master/neuralNetwork-master/Tut-5/myProject1/myProject1.sim/sim_1/behav/xsim/w_1_25.mif")
   ) n_25 (
     .clk             (clk),
     .rst             (rst),
@@ -408,7 +408,7 @@ module layer_1 #(
     .DATAWIDTH       (DATAWIDTH),
     .WEIGHTINTWIDTH  (WEIGHTINTWIDTH),
     .BIAS            (16'b1111101101000100),
-    .WEIGHTFILE      ("w_1_26.mif")
+    .WEIGHTFILE      ("/media/nisitha/My_Passport/MOODLE/Vivado_projects/neuralNetwork-master/neuralNetwork-master/Tut-5/myProject1/myProject1.sim/sim_1/behav/xsim/w_1_26.mif")
   ) n_26 (
     .clk             (clk),
     .rst             (rst),
@@ -423,7 +423,7 @@ module layer_1 #(
     .DATAWIDTH       (DATAWIDTH),
     .WEIGHTINTWIDTH  (WEIGHTINTWIDTH),
     .BIAS            (16'b1111110111001001),
-    .WEIGHTFILE      ("w_1_27.mif")
+    .WEIGHTFILE      ("/media/nisitha/My_Passport/MOODLE/Vivado_projects/neuralNetwork-master/neuralNetwork-master/Tut-5/myProject1/myProject1.sim/sim_1/behav/xsim/w_1_27.mif")
   ) n_27 (
     .clk             (clk),
     .rst             (rst),
@@ -438,7 +438,7 @@ module layer_1 #(
     .DATAWIDTH       (DATAWIDTH),
     .WEIGHTINTWIDTH  (WEIGHTINTWIDTH),
     .BIAS            (16'b0000010101000000),
-    .WEIGHTFILE      ("w_1_28.mif")
+    .WEIGHTFILE      ("/media/nisitha/My_Passport/MOODLE/Vivado_projects/neuralNetwork-master/neuralNetwork-master/Tut-5/myProject1/myProject1.sim/sim_1/behav/xsim/w_1_28.mif")
   ) n_28 (
     .clk             (clk),
     .rst             (rst),
@@ -453,7 +453,7 @@ module layer_1 #(
     .DATAWIDTH       (DATAWIDTH),
     .WEIGHTINTWIDTH  (WEIGHTINTWIDTH),
     .BIAS            (16'b1111110000011000),
-    .WEIGHTFILE      ("w_1_29.mif")
+    .WEIGHTFILE      ("/media/nisitha/My_Passport/MOODLE/Vivado_projects/neuralNetwork-master/neuralNetwork-master/Tut-5/myProject1/myProject1.sim/sim_1/behav/xsim/w_1_29.mif")
   ) n_29 (
     .clk             (clk),
     .rst             (rst),
