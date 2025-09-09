@@ -27,3 +27,13 @@ These modules instantiate complete neural network layers with parameterized conf
 ### Top-Level Module
 The top-level module integrates all neural network components and implements an AXI-Lite interface for communication with external processors (Zynq PS). It manages the complete data flow through the network layers, coordinates the pipelined processing of input values, and generates interrupts when classification results are ready. The design includes parameterized layer configurations and handles proper reset synchronization across all components.
 
+## Results Files
+
+### Fully Connected Neural Network Model
+<img width="561" height="763" alt="model_architecture" src="https://github.com/user-attachments/assets/216d8c34-4849-45dc-a859-92b8367b5e9a" />
+
+### Final Block Design Implementation
+<img width="1817" height="756" alt="bd_snapshot" src="https://github.com/user-attachments/assets/c182aca4-bed5-49a7-8d67-52d554c89e14" />
+
+### Final accuracy after simulation
+<img width="552" height="202" alt="Accuracy" src="https://github.com/user-attachments/assets/c19407d5-9c22-43de-93d3-d9f022041652" />
