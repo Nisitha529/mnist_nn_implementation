@@ -1,73 +1,29 @@
 # MNIST Digit Recognition Neural Network in Verilog
-
-Hardware implementation of a fixed-point, fully-connected neural network to classify handwritten digits (0–9) from the MNIST dataset. Written entirely in Verilog.
-
 ---
+This project implements a complete neural network accelerator on FPGA for MNIST handwritten digit recognition. The system features a multi-layer architecture with configurable parameters and AXI-Lite interface for communication with processors. The design efficiently processes 28x28 pixel images through four neural network layers to classify digits 0-9 with optimized resource utilization.
 
-## Table of Contents
+## Project Overview
+This project implements a complete neural network accelerator on Zybo FPGA designed for MNIST handwritten digit recognition. The system features a multi-layer perceptron architecture with optimized hardware implementation using fixed-point arithmetic and efficient resource utilization. The design processes 28×28 pixel images through four neural network layers to classify digits 0-9 with high accuracy while maintaining low latency and power consumption suitable for edge deployment.
 
-- [Motivation](#motivation)  
-- [Features](#features)  
-- [Modules Overview](#modules-overview)  
-- [Top-Level Interface](#top-level-interface)  
+## Module Descriptions
+### Neuron module
+The neuron module serves as the fundamental computation unit within the neural network architecture. It implements a complete artificial neuron with configurable parameters for input size, data width, and weight precision. The module performs multiply-accumulate operations using a weight memory block and includes a saturation logic to prevent arithmetic overflow in fixed-point computations. Key features include pipelined processing for high throughput, ReLU activation function implementation, and proper handling of validation signals for coordinated data flow through the network layers.
 
----
+### Weight Memory Module
+This module provides efficient storage for neural network weights using block RAM initialized from Memory Initialization Files (MIF). The design supports parameterized memory depth and data width, allowing flexible configuration for different network architectures. The read-enable interface ensures weight values are available precisely when needed during the computation cycle, optimizing memory bandwidth and power consumption.
 
-## Motivation
+### ReLu Activation Module
+The Rectified Linear Unit (ReLU) activation module implements the popular activation function with proper saturation handling for fixed-point arithmetic. The design processes 32-bit inputs and produces 16-bit outputs, efficiently converting the accumulated sum from the neuron computation into activated outputs while preventing numerical overflow through careful saturation logic.
 
-This project demonstrates how to implement neural network inference in pure hardware using Verilog. It is aimed at hobbyists, students, and FPGA/ASIC designers interested in realizing neural classification on embedded platforms — showcasing fixed-point arithmetic, pipelined design, and state-machine-based control.
+### sig_rom (Sigmoid activation)
+Provides sigmoid activation through a precomputed lookup table stored in ROM. Converts input values to addresses and outputs the corresponding sigmoid value from the memory initialization file.
 
----
+### MaxFinder module
+This component identifies the neuron with the highest output value in the final layer, corresponding to the predicted digit classification. The module processes all output layer results simultaneously and returns the index of the maximum value along with a validation signal, enabling efficient decision-making without requiring external processing.
 
-## Features
+### Layer Modules (1-4)
+These modules instantiate complete neural network layers with parameterized configurations. Each layer contains multiple neuron instances with specific weight files and bias values optimized for the MNIST classification task. The layers are designed with appropriate input sizes: Layer 1 processes the 784 input features with its 30 neurons, Layers 2-3 serve as hidden layers with 30, and 10 neurons, and Layer 4 produces the final 10 output classifications.
 
-- **4-layer network architecture**:  
-  - Layer sizes: 784→30→30→10→10
-- **Serial data processing**: one pixel per clock cycle
-- **Fixed-point arithmetic**: 16-bit width with configurable integer portion (`WEIGHTINTWIDTH`)
-- **ReLU activation**: applied in all layers
-- **Weight initialization**: via `.mif` files per neuron
-- **Max-finder**: hardware module to determine the predicted digit
+### Top-Level Module
+The top-level module integrates all neural network components and implements an AXI-Lite interface for communication with external processors (Zynq PS). It manages the complete data flow through the network layers, coordinates the pipelined processing of input values, and generates interrupts when classification results are ready. The design includes parameterized layer configurations and handles proper reset synchronization across all components.
 
----
-
-## Modules Overview
-
-### `top_mnist.v`
-- Coordinates data flow and layer execution via a state machine
-- Handles serial input of 784 pixels, propagates through all layers, and outputs final prediction
-
-### `layer_X.v`
-- Parametrized modules for each layer (number of inputs/neuron count)
-- Reads weights, applies bias, activates via ReLU, and outputs serialized data
-
-### `neuron.v`
-- Core computation: MAC (multiply–accumulate), bias addition, saturation, and activation
-
-### `relu.v`
-- Applies `y = max(0, x)`
-
-### `sig_rom.v`
-- Sigmoid activation via read-only memory *(currently inactive)*
-
-### `weight_memory.v`
-- Manages `.mif` files providing neuron-specific weights
-
-### `maxfinder.v`
-- Scans 10 final output values and selects the index of the highest
-
----
-## Top-Level Interface
-
-```verilog
-top_mnist #(
-  .DATAWIDTH(16),
-  .WEIGHTINTWIDTH(4)
-) dut (
-  .clk           (clk),          // system clock
-  .rst           (rst),          // active-high reset
-  .input_valid   (pixel_valid),  // asserted per input pixel
-  .input_val     (pixel_data),   // 16-bit pixel sample
-  .out           (digit_out),    // predicted digit (4-bit)
-  .out_valid     (result_valid)  // indicates valid output
-);
