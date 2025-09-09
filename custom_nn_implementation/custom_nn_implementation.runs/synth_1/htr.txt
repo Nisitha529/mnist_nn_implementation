@@ -7,4 +7,4 @@
 # Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 #
 
-vivado -log bd_mnist_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_mnist_wrapper.tcl
+vivado -log top_mnist.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_mnist.tcl

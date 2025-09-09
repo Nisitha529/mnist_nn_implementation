@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1754604203" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/top_mnist.dcp">
-  <File Type="RDS-RDS" Name="bd_mnist_wrapper.vds"/>
-  <File Type="REPORTS-TCL" Name="bd_mnist_wrapper_reports.tcl"/>
-  <File Type="PA-TCL" Name="bd_mnist_wrapper.tcl"/>
-  <File Type="RDS-DCP" Name="bd_mnist_wrapper.dcp"/>
-  <File Type="RDS-UTIL" Name="bd_mnist_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="bd_mnist_wrapper_utilization_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1757419785" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/top_mnist.dcp">
+  <File Type="RDS-RDS" Name="top_mnist.vds"/>
+  <File Type="REPORTS-TCL" Name="top_mnist_reports.tcl"/>
+  <File Type="PA-TCL" Name="top_mnist.tcl"/>
+  <File Type="RDS-DCP" Name="top_mnist.dcp"/>
+  <File Type="RDS-UTIL" Name="top_mnist_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="top_mnist_utilization_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/axi_lite_wrapper.v">
@@ -80,6 +80,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/bd/bd_mnist/bd_mnist.bd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -87,6 +88,7 @@
     </File>
     <File Path="$PGENDIR/sources_1/bd/bd_mnist/hdl/bd_mnist_wrapper.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -122,7 +124,9 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="bd_mnist_wrapper"/>
+      <Option Name="TopModule" Val="top_mnist"/>
+      <Option Name="TopLib" Val="xil_defaultlib"/>
+      <Option Name="TopRTLFile" Val="$PSRCDIR/sources_1/new/top_mnist.v"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">

@@ -3,12 +3,12 @@
 # SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Fri Aug  8 03:39:48 2025
-# Process ID: 293195
+# Start of session at: Tue Sep  9 17:39:49 2025
+# Process ID: 164945
 # Current directory: /media/nisitha/My_Passport/MOODLE/Vivado_projects/cnn_character_recognition/custom_cnn_implementation/custom_nn_implementation/custom_nn_implementation/custom_nn_implementation.runs/synth_1
-# Command line: vivado -log bd_mnist_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_mnist_wrapper.tcl
-# Log file: /media/nisitha/My_Passport/MOODLE/Vivado_projects/cnn_character_recognition/custom_cnn_implementation/custom_nn_implementation/custom_nn_implementation/custom_nn_implementation.runs/synth_1/bd_mnist_wrapper.vds
+# Command line: vivado -log top_mnist.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_mnist.tcl
+# Log file: /media/nisitha/My_Passport/MOODLE/Vivado_projects/cnn_character_recognition/custom_cnn_implementation/custom_nn_implementation/custom_nn_implementation/custom_nn_implementation.runs/synth_1/top_mnist.vds
 # Journal file: /media/nisitha/My_Passport/MOODLE/Vivado_projects/cnn_character_recognition/custom_cnn_implementation/custom_nn_implementation/custom_nn_implementation/custom_nn_implementation.runs/synth_1/vivado.jou
-# Running On: nisitha-laptop, OS: Linux, CPU Frequency: 1800.506 MHz, CPU Physical cores: 4, Host memory: 16471 MB
+# Running On: nisitha-laptop, OS: Linux, CPU Frequency: 3599.843 MHz, CPU Physical cores: 4, Host memory: 16471 MB
 #-----------------------------------------------------------
-source bd_mnist_wrapper.tcl -notrace
+source top_mnist.tcl -notrace
